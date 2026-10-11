@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bluffs at Cedar Creek · Waterfront Camping in Star Tannery, Virginia</title>
+<meta name="description" content="Waterfront RV and tent sites along Cedar Creek in Star Tannery, Virginia. Water and 50 amp hookups, a 4 mile trail, free pond fishing and Shenandoah views. Book your stay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --stone:#F2ECE1;
+  --stone-2:#E7DFD0;
+  --paper:#FBF8F2;
+  --creek:#1E3A33;
+  --creek-2:#28493F;
+  --moss:#5B7546;
+  --water:#3F6470;
+  --amber:#D7863A;
+  --amber-2:#BF7029;
+  --ink:#1A1F1C;
+  --muted:#5E655F;
+  --line:rgba(30,58,51,.14);
+  --radius:18px;
+  --shadow:0 18px 40px -18px rgba(20,35,30,.35);
+  --ease:cubic-bezier(.22,.7,.2,1);
+  --head:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--stone);color:var(--ink);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.02;letter-spacing:-.02em}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--moss)}
+.section{padding:96px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(34px,4.6vw,54px);color:var(--creek);margin-top:10px}
+.sec-head p{max-width:420px;color:var(--muted)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:999px;border:0;cursor:pointer;font-weight:700;font-size:16px;transition:transform .25s var(--ease),background .25s,box-shadow .25s}
+.btn-amber{background:var(--amber);color:#fff;box-shadow:0 10px 24px -10px rgba(215,134,58,.8)}
+.btn-amber:hover{background:var(--amber-2);transform:translateY(-2px)}
+.btn-ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.26)}
+.btn-dark{background:var(--creek);color:#fff}
+.btn-dark:hover{background:var(--creek-2);transform:translateY(-2px)}
+
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .35s,box-shadow .35s,padding .35s;padding:18px 0}
+.nav.solid{background:rgba(251,248,242,.94);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line);padding:10px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;transition:color .35s}
+.nav.solid .logo{color:var(--creek)}
+.logo-mark{width:42px;height:42px;border-radius:12px;background:var(--amber);display:grid;place-items:center;color:#fff;font-size:18px}
+.logo b{font-family:var(--head);font-size:21px;font-weight:800;line-height:1;display:block;letter-spacing:-.01em}
+.logo small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;opacity:.8}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{color:#fff;font-weight:600;font-size:15px;position:relative;transition:color .3s}
+.nav.solid .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:100%;background:var(--amber);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{padding:11px 20px;font-size:15px}
+.burger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.4);background:transparent;color:#fff;cursor:pointer;font-size:18px}
+.nav.solid .burger{color:var(--creek);border-color:var(--line)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;color:#fff;overflow:hidden;isolation:isolate;padding:130px 0 60px}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.06);animation:heroZoom 12s var(--ease) forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(12,24,20,.82) 0%,rgba(12,24,20,.55) 45%,rgba(12,24,20,.12) 100%),linear-gradient(180deg,rgba(12,24,20,.45) 0%,transparent 25%,transparent 70%,rgba(12,24,20,.6) 100%)}
+.hero-content{position:relative}
+.hero-text{max-width:640px}
+.hero-text>*{opacity:0;transform:translateY(22px);animation:rise .9s var(--ease) forwards}
+.hero-text>*:nth-child(2){animation-delay:.12s}
+.hero-text>*:nth-child(3){animation-delay:.24s}
+.hero-text>*:nth-child(4){animation-delay:.36s}
+@keyframes rise{to{opacity:1;transform:none}}
+.badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);font-size:14px;font-weight:600}
+.chip i{color:#F4B66F}
+.hero h1{font-size:clamp(40px,5.6vw,76px);line-height:1.02;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:#F4B66F}
+.hero-sub{font-size:clamp(16px,1.4vw,19px);margin-top:18px;max-width:540px;color:rgba(255,255,255,.88)}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+
+/* quick booking bar */
+.quickbar{margin-top:44px;background:rgba(251,248,242,.97);color:var(--ink);border-radius:20px;padding:8px;display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:4px;box-shadow:0 30px 60px -25px rgba(0,0,0,.6);max-width:860px;opacity:0;animation:rise .9s .5s var(--ease) forwards}
+.qb-field{padding:10px 16px;border-radius:14px;transition:background .25s;position:relative}
+.qb-field+.qb-field::before{content:"";position:absolute;left:-2px;top:22%;bottom:22%;width:1px;background:var(--line)}
+.qb-field:hover,.qb-field:focus-within{background:var(--stone)}
+.qb-field label{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--moss)}
+.qb-field input,.qb-field select{width:100%;border:0;background:transparent;font-size:15.5px;font-weight:600;padding:4px 0;outline:none;cursor:pointer}
+.quickbar .btn{border-radius:14px;padding:0 40px}
+.hero-bottom{display:flex;align-items:stretch;justify-content:space-between;gap:24px;margin-top:44px}
+.hero-bottom .quickbar{margin-top:0;flex:1;max-width:none}
+.hero-rating{flex:none;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(12px);border-radius:20px;padding:14px 22px;display:flex;align-items:center;gap:14px;opacity:0;animation:rise .9s .7s var(--ease) forwards;transition:background .3s}
+.hero-rating:hover{background:rgba(255,255,255,.2)}
+.hero-rating img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid #fff}
+.hero-rating b{display:block;font-family:var(--head);font-size:17px}
+.hero-rating span{font-size:13px;opacity:.85}
+.hero-rating .st{color:#F4B66F;font-size:12px;letter-spacing:2px}
+
+/* facts strip */
+.facts{background:var(--creek);color:#fff}
+.facts ul{list-style:none;display:grid;grid-template-columns:repeat(6,1fr)}
+.facts li{padding:26px 18px;display:flex;flex-direction:column;gap:8px;border-left:1px solid rgba(255,255,255,.1);transition:background .3s}
+.facts li:first-child{border-left:0}
+.facts li:hover{background:var(--creek-2)}
+.facts i{font-size:22px;color:#F4B66F}
+.facts strong{font-family:var(--head);font-size:21px;font-weight:800;line-height:1.1}
+.facts span{font-size:14px;opacity:.75}
+
+/* gallery mosaic */
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:120px;gap:14px}
+.tile{position:relative;overflow:hidden;border-radius:var(--radius);cursor:zoom-in;background:var(--stone-2);border:0;padding:0}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease),filter .5s}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(14,26,22,.7));opacity:.0;transition:opacity .4s}
+.tile:hover img{transform:scale(1.06)}
+.tile:hover::after,.tile:focus-visible::after{opacity:1}
+.tile figcaption{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;color:#fff;font-weight:600;display:flex;justify-content:space-between;align-items:center;transform:translateY(10px);opacity:0;transition:.4s var(--ease)}
+.tile:hover figcaption,.tile:focus-visible figcaption{transform:none;opacity:1}
+.t1{grid-column:span 7;grid-row:span 4}
+.t2{grid-column:span 5;grid-row:span 2}
+.t3{grid-column:span 5;grid-row:span 2}
+.t4{grid-column:span 4;grid-row:span 3}
+.t5{grid-column:span 8;grid-row:span 3}
+.gallery-foot{display:flex;justify-content:center;margin-top:30px}
+
+/* the site */
+.site{background:var(--paper)}
+.site-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:start}
+.site-photo{position:sticky;top:96px}
+.site-photo .frame{border-radius:28px;overflow:hidden;aspect-ratio:4/5;box-shadow:var(--shadow)}
+.site-photo img{width:100%;height:100%;object-fit:cover}
+.price-tag{position:absolute;right:-18px;bottom:36px;background:var(--amber);color:#fff;border-radius:20px;padding:16px 22px;box-shadow:var(--shadow);text-align:center;animation:bob 4s ease-in-out infinite}
+.price-tag b{display:block;font-family:var(--head);font-size:38px;line-height:1;font-weight:800}
+.price-tag small{font-size:13px;font-weight:600;opacity:.9}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.site-copy h2{font-size:clamp(32px,4.2vw,50px);color:var(--creek);margin:10px 0 18px}
+.lead{font-size:19px;color:#333a35}
+.site-copy p+p{margin-top:14px}
+.tabs{display:flex;gap:6px;background:var(--stone);padding:6px;border-radius:14px;margin:32px 0 20px;flex-wrap:wrap}
+.tab{flex:1;min-width:110px;border:0;background:transparent;padding:11px 14px;border-radius:10px;cursor:pointer;font-weight:700;font-size:15px;color:var(--muted);transition:.25s}
+.tab[aria-selected="true"]{background:#fff;color:var(--creek);box-shadow:0 4px 12px -6px rgba(0,0,0,.25)}
+.panel{display:none;animation:fade .45s var(--ease)}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}}
+.amen{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.amen li{display:flex;gap:12px;align-items:center;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;font-weight:500;font-size:15px;transition:transform .25s,border-color .25s}
+.amen li:hover{transform:translateX(4px);border-color:var(--moss)}
+.amen i{width:34px;height:34px;flex:none;border-radius:10px;display:grid;place-items:center;background:var(--stone);color:var(--creek)}
+.amen li.no{color:var(--muted)}
+.amen li.no i{background:#F6E6DC;color:#B4552E}
+
+/* things to do */
+.todo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.todo{background:var(--paper);border-radius:var(--radius);padding:28px;border:1px solid var(--line);transition:transform .35s var(--ease),box-shadow .35s,background .35s;position:relative;overflow:hidden}
+.todo:hover{transform:translateY(-6px);box-shadow:var(--shadow);background:#fff}
+.todo .ic{width:54px;height:54px;border-radius:16px;background:var(--creek);color:#F4B66F;display:grid;place-items:center;font-size:22px;margin-bottom:18px;transition:transform .35s var(--ease)}
+.todo:hover .ic{transform:rotate(-8deg) scale(1.06)}
+.todo h3{font-size:23px;color:var(--creek);margin-bottom:8px}
+.todo p{color:var(--muted);font-size:15.5px}
+.todo .dist{position:absolute;top:24px;right:24px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-2);background:#FBEBDB;padding:5px 10px;border-radius:999px}
+
+/* reviews */
+.reviews{background:var(--creek);color:#fff;overflow:hidden}
+.reviews .sec-head h2{color:#fff}
+.reviews .sec-head p{color:rgba(255,255,255,.7)}
+.score{display:flex;align-items:center;gap:18px}
+.score b{font-family:var(--head);font-size:68px;line-height:.9;font-weight:800;color:#F4B66F}
+.score span{font-size:15px;opacity:.8;line-height:1.4}
+.rv-track{display:flex;gap:20px;transition:transform .6s var(--ease)}
+.rv{flex:0 0 calc((100% - 40px)/3);background:var(--creek-2);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:18px}
+.rv .stars{color:#F4B66F;font-size:14px;letter-spacing:3px}
+.rv q{font-size:16.5px;line-height:1.65;quotes:none;flex:1}
+.rv footer{display:flex;align-items:center;gap:12px;border-top:1px solid rgba(255,255,255,.1);padding-top:16px}
+.av{width:44px;height:44px;border-radius:50%;background:var(--amber);display:grid;place-items:center;font-weight:700}
+.rv footer small{display:block;opacity:.65;font-size:13px}
+.rv-ctrl{display:flex;gap:10px;margin-top:30px;align-items:center}
+.rv-ctrl button{width:50px;height:50px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;cursor:pointer;transition:.25s}
+.rv-ctrl button:hover:not(:disabled){background:var(--amber);border-color:var(--amber)}
+.rv-ctrl button:disabled{opacity:.3;cursor:not-allowed}
+.rv-dots{display:flex;gap:6px;margin-left:12px}
+.rv-dots span{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.3);transition:.3s}
+.rv-dots span.on{width:26px;background:#F4B66F}
+
+/* host */
+.host-card{display:grid;grid-template-columns:auto 1fr auto;gap:36px;align-items:center;background:var(--paper);border-radius:28px;padding:40px;border:1px solid var(--line)}
+.host-pic{width:150px;height:150px;border-radius:50%;object-fit:cover;border:6px solid #fff;box-shadow:var(--shadow);background:var(--stone-2)}
+.host-card h2{font-size:clamp(32px,4vw,46px);color:var(--creek);margin:8px 0 12px}
+.host-card p{color:var(--muted);max-width:560px}
+.host-stats{display:grid;gap:12px;min-width:220px}
+.hs{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--stone);border-radius:14px;font-size:15px}
+.hs i{color:var(--amber-2);width:20px;text-align:center}
+.hs b{display:block;font-size:16px}
+
+/* booking */
+.book{background:linear-gradient(180deg,var(--stone) 0%,var(--stone-2) 100%)}
+.book-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:start}
+.form-card{background:#fff;border-radius:28px;padding:36px;box-shadow:var(--shadow)}
+.steps{display:flex;gap:8px;margin-bottom:28px}
+.steps span{flex:1;height:5px;border-radius:999px;background:var(--stone-2);transition:background .4s}
+.steps span.on{background:var(--amber)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.full{grid-column:1/-1}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:7px;color:var(--creek)}
+.field input,.field select,.field textarea{width:100%;padding:14px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--paper);transition:border-color .25s,box-shadow .25s;font-size:16px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--moss);box-shadow:0 0 0 4px rgba(91,117,70,.15)}
+.field textarea{min-height:100px;resize:vertical}
+.hint{font-size:13px;color:var(--muted);margin-top:6px;display:flex;gap:6px;align-items:center}
+.hint.warn{color:#B4552E;font-weight:600}
+.err{border-color:#C9603A !important}
+.stepper{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;background:var(--paper);overflow:hidden}
+.stepper button{width:50px;height:50px;border:0;background:transparent;cursor:pointer;font-size:15px;color:var(--creek);transition:background .2s}
+.stepper button:hover{background:var(--stone)}
+.stepper output{flex:1;text-align:center;font-weight:700}
+.toggles{display:flex;gap:10px;flex-wrap:wrap}
+.tog{position:relative}
+.tog input{position:absolute;opacity:0}
+.tog label{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border-radius:999px;border:1.5px solid var(--line);cursor:pointer;font-weight:600;font-size:15px;transition:.25s;background:var(--paper);margin:0;color:var(--ink)}
+.tog input:checked+label{background:var(--creek);color:#fff;border-color:var(--creek)}
+.tog input:focus-visible+label{outline:3px solid var(--amber);outline-offset:2px}
+.form-actions{margin-top:24px;display:flex;gap:12px;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.form-actions .note{font-size:14px;color:var(--muted);display:flex;gap:8px;align-items:center}
+.summary{position:sticky;top:96px;background:var(--creek);color:#fff;border-radius:28px;padding:32px}
+.summary h3{font-size:30px;margin-bottom:6px}
+.summary .rate{opacity:.75;font-size:15px;margin-bottom:22px}
+.sum-row{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px dashed rgba(255,255,255,.18);font-size:15.5px}
+.sum-row span:first-child{opacity:.8}
+.sum-total{display:flex;justify-content:space-between;align-items:end;padding-top:18px}
+.sum-total b{font-family:var(--head);font-size:44px;line-height:1;font-weight:800;color:#F4B66F}
+.rules{list-style:none;margin-top:26px;display:grid;gap:10px;font-size:14.5px}
+.rules li{display:flex;gap:10px;align-items:flex-start;opacity:.9}
+.rules i{color:#F4B66F;margin-top:4px;width:16px}
+.success{display:none;text-align:center;padding:30px 10px}
+.success.show{display:block;animation:fade .5s var(--ease)}
+.success .ok{width:80px;height:80px;border-radius:50%;background:var(--moss);color:#fff;display:grid;place-items:center;font-size:34px;margin:0 auto 18px}
+.success h3{font-size:34px;color:var(--creek);margin-bottom:10px}
+.success p{color:var(--muted);max-width:420px;margin:0 auto}
+
+/* footer */
+footer.site-foot{background:#14261F;color:rgba(255,255,255,.75);padding:70px 0 26px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px}
+.foot-grid h4{color:#fff;font-size:14px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.foot-grid ul{list-style:none;display:grid;gap:10px;font-size:15px}
+.foot-grid a{transition:color .25s}
+.foot-grid a:hover{color:#F4B66F}
+.foot-grid .logo{color:#fff;margin-bottom:16px}
+.foot-grid p{font-size:15px;max-width:300px}
+.foot-grid li i{width:20px;color:#F4B66F}
+.copy{text-align:center;border-top:1px solid rgba(255,255,255,.1);margin-top:50px;padding-top:24px;font-size:14px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,18,15,.94);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s}
+.lb.open{opacity:1;pointer-events:auto}
+.lb figure{max-width:min(1200px,92vw);max-height:84vh;display:flex;flex-direction:column;gap:14px;align-items:center}
+.lb img{max-height:76vh;border-radius:14px;object-fit:contain;transition:opacity .3s}
+.lb figcaption{color:#fff;font-weight:500;text-align:center}
+.lb button{position:absolute;width:54px;height:54px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;cursor:pointer;font-size:18px;transition:.25s}
+.lb button:hover{background:var(--amber);border-color:var(--amber)}
+.lb .close{top:24px;right:24px}
+.lb .prev{left:24px;top:50%;transform:translateY(-50%)}
+.lb .next{right:24px;top:50%;transform:translateY(-50%)}
+.lb .count{position:absolute;top:34px;left:30px;color:#fff;opacity:.7;font-weight:600}
+
+/* mobile book bar */
+.mbar{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;background:var(--creek);color:#fff;border-radius:18px;padding:10px 10px 10px 20px;display:none;align-items:center;justify-content:space-between;box-shadow:0 20px 40px -10px rgba(0,0,0,.5);transform:translateY(140%);transition:transform .4s var(--ease)}
+.mbar.show{transform:none}
+.mbar b{font-family:var(--head);font-size:26px;font-weight:800;color:#F4B66F}
+.mbar small{opacity:.8}
+.mbar .btn{padding:12px 20px}
+
+/* reveal */
+.rv-in{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv-in.seen{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:1020px){
+  .facts ul{grid-template-columns:repeat(3,1fr)}
+  .facts li:nth-child(4){border-left:0}
+  .facts li{border-top:1px solid rgba(255,255,255,.08)}
+  .site-grid,.book-grid{grid-template-columns:1fr}
+  .site-photo,.summary{position:relative;top:0}
+  .site-photo .frame{aspect-ratio:16/11}
+  .price-tag{right:16px}
+  .todo-grid{grid-template-columns:1fr 1fr}
+  .rv{flex-basis:calc((100% - 20px)/2)}
+  .host-card{grid-template-columns:auto 1fr}
+  .host-stats{grid-column:1/-1;grid-template-columns:repeat(3,1fr)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .nav-links,.nav-cta{display:none}
+  .burger{display:grid;place-items:center}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:12px;right:12px;background:var(--paper);border-radius:18px;padding:20px;gap:4px;box-shadow:var(--shadow)}
+  .nav-links.open a{color:var(--ink);display:block;padding:12px 10px;font-size:17px}
+  .hero{padding:110px 0 40px;align-items:flex-end}
+  .hero::before{background:linear-gradient(180deg,rgba(12,24,20,.55) 0%,rgba(12,24,20,.35) 40%,rgba(12,24,20,.85) 100%)}
+  .quickbar{grid-template-columns:1fr 1fr;margin-top:30px}
+  .qb-field:nth-child(3){grid-column:1/-1}
+  .qb-field:nth-child(3)::before{display:none}
+  .quickbar .btn{grid-column:1/-1;padding:16px}
+  .mosaic{grid-auto-rows:90px;gap:10px}
+  .t1{grid-column:span 12;grid-row:span 4}
+  .t2,.t3{grid-column:span 6;grid-row:span 2}
+  .t4{grid-column:span 12;grid-row:span 3}
+  .t5{grid-column:span 12;grid-row:span 3}
+  .tile figcaption{opacity:1;transform:none;font-size:14px}
+  .tile::after{opacity:1}
+  .mbar{display:flex}
+  body{padding-bottom:84px}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .section{padding:72px 0}
+  .wrap{width:calc(100% - 32px)}
+  .facts ul{grid-template-columns:1fr 1fr}
+  .facts li:nth-child(odd){border-left:0}
+  .facts li:nth-child(4){border-left:1px solid rgba(255,255,255,.1)}
+  .todo-grid{grid-template-columns:1fr}
+  .amen{grid-template-columns:1fr}
+  .rv{flex-basis:100%}
+  .host-card{grid-template-columns:1fr;text-align:center;padding:30px 22px}
+  .host-pic{margin:0 auto}
+  .host-card p{margin:0 auto}
+  .host-stats{grid-template-columns:1fr;text-align:left}
+  .fgrid{grid-template-columns:1fr}
+  .form-card,.summary{padding:24px 20px;border-radius:22px}
+  .foot-grid{grid-template-columns:1fr}
+  .lb .prev,.lb .next{top:auto;bottom:24px;transform:none}
+  .lb .prev{left:calc(50% - 64px)}
+  .lb .next{right:calc(50% - 64px)}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+  .rv-in,.hero-text>*,.quickbar{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav" aria-label="Main">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="The Bluffs at Cedar Creek home">
+      <span class="logo-mark"><i class="fa-solid fa-mountain-sun"></i></span>
+      <span><b>The Bluffs</b><small>at Cedar Creek</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#gallery">Photos</a></li>
+      <li><a href="#site">The Site</a></li>
+      <li><a href="#explore">Explore</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#host">Your Host</a></li>
+    </ul>
+    <a href="#book" class="btn btn-amber nav-cta"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-bg">
+    <img src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_2200,q_auto/v1615035435/campground-photos/afuhomqst5qy5afoje5u/the-bluffs-at-cedar-creek-bluffs-at-cedar-creek.jpg" alt="Limestone bluffs rising above Cedar Creek" fetchpriority="high">
+  </div>
+  <div class="wrap hero-content">
+    <div class="hero-text">
+      <div class="badge-row">
+        <span class="chip"><i class="fa-solid fa-location-dot"></i> Star Tannery, Virginia</span>
+        <span class="chip"><i class="fa-solid fa-heart"></i> 100% recommend</span>
+      </div>
+      <h1>Wake up on the <em>creek</em>, right under the bluffs.</h1>
+      <p class="hero-sub">Waterfront RV and tent sites on an 863 acre Shenandoah Valley farm. Hookups at every site, trout in the stream and quiet nights by the water.</p>
+      <div class="hero-actions">
+        <a href="#book" class="btn btn-amber"><i class="fa-solid fa-calendar-check"></i> Book from $56 / night</a>
+        <a href="#gallery" class="btn btn-ghost"><i class="fa-solid fa-images"></i> See the photos</a>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+    <form class="quickbar" id="quickbar" aria-label="Check availability">
+      <div class="qb-field">
+        <label for="qbIn"><i class="fa-regular fa-calendar"></i> Arrive</label>
+        <input type="date" id="qbIn" required>
+      </div>
+      <div class="qb-field">
+        <label for="qbOut"><i class="fa-regular fa-calendar"></i> Depart</label>
+        <input type="date" id="qbOut" required>
+      </div>
+      <div class="qb-field">
+        <label for="qbGuests"><i class="fa-solid fa-user-group"></i> Guests</label>
+        <select id="qbGuests">
+          <option value="1">1 guest</option><option value="2" selected>2 guests</option><option value="3">3 guests</option>
+          <option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option>
+        </select>
+      </div>
+      <button class="btn btn-amber" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Check dates</button>
+    </form>
+    </div>
+  </div>
+</header>
+
+<!-- FACTS -->
+<section class="facts" aria-label="Highlights">
+  <ul class="wrap">
+    <li><i class="fa-solid fa-water"></i><strong>Waterfront</strong><span>Sites right on Cedar Creek</span></li>
+    <li><i class="fa-solid fa-plug"></i><strong>50 Amp</strong><span>Plus water at every site</span></li>
+    <li><i class="fa-solid fa-caravan"></i><strong>Up to 60 ft</strong><span>Pull through, slideouts OK</span></li>
+    <li><i class="fa-solid fa-dog"></i><strong>Dogs Welcome</strong><span>On or off leash</span></li>
+    <li><i class="fa-solid fa-fire"></i><strong>Campfires</strong><span>Private fire pit and grate</span></li>
+    <li><i class="fa-solid fa-person-hiking"></i><strong>4 Mile Trail</strong><span>Loops the whole property</span></li>
+  </ul>
+</section>
+
+<!-- GALLERY -->
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div>
+        <span class="eyebrow"><i class="fa-solid fa-camera"></i> The Property</span>
+        <h2>See where you'll stay</h2>
+      </div>
+      <p>Tap any photo to open it full screen. Use the arrows or your keyboard to move through them.</p>
+    </div>
+    <div class="mosaic rv-in">
+      <figure class="tile t1" tabindex="0" role="button" data-i="0" aria-label="Open photo: The bluffs above the creek">
+        <img loading="lazy" src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1400,q_auto/v1615035898/campground-photos/udgv6qze4cuwqmlqipy1/the-bluffs-at-cedar-creek-bluffs-at-cedar-creek.jpg" alt="The bluffs above Cedar Creek">
+        <figcaption>The bluffs above the creek <i class="fa-solid fa-expand"></i></figcaption>
+      </figure>
+      <figure class="tile t2" tabindex="0" role="button" data-i="1" aria-label="Open photo: Sunset over the farm">
+        <img loading="lazy" src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1000,q_auto/v1615036057/campground-photos/nzuheewoa2qg7l50qumj/the-bluffs-at-cedar-creek-bluffs-at-cedar-creek.jpg" alt="Sun setting over the property">
+        <figcaption>Sunset over the farm <i class="fa-solid fa-expand"></i></figcaption>
+      </figure>
+      <figure class="tile t3" tabindex="0" role="button" data-i="2" aria-label="Open photo: Across the creek at site one">
+        <img loading="lazy" src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1000,q_auto/v1615036615/campground-photos/ntuoohfltm5wvm0lfary/the-bluffs-at-cedar-creek-bluffs-at-cedar-creek.jpg" alt="View from across the creek at site one">
+        <figcaption>Across the creek at site one <i class="fa-solid fa-expand"></i></figcaption>
+      </figure>
+      <figure class="tile t4" tabindex="0" role="button" data-i="3" aria-label="Open photo: The land">
+        <img loading="lazy" src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1000,q_auto/v1615036592/campground-photos/hyv3yfottp1quhfvezis/the-bluffs-at-cedar-creek-bluffs-at-cedar-creek.jpg" alt="Open land along the creek">
+        <figcaption>Open land by the water <i class="fa-solid fa-expand"></i></figcaption>
+      </figure>
+      <figure class="tile t5" tabindex="0" role="button" data-i="4" aria-label="Open photo: Cedar Creek">
+        <img loading="lazy" src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1400,q_auto/v1615036646/campground-photos/yl7mgzkgdbrs6ixgpxiq/the-bluffs-at-cedar-creek-bluffs-at-cedar-creek.jpg" alt="Cedar Creek winding through the property">
+        <figcaption>Cedar Creek through the valley <i class="fa-solid fa-expand"></i></figcaption>
+      </figure>
+    </div>
+    <div class="gallery-foot rv-in">
+      <button class="btn btn-dark" id="openAll"><i class="fa-solid fa-images"></i> View all photos</button>
+    </div>
+  </div>
+</section>
+
+<!-- THE SITE -->
+<section class="section site" id="site">
+  <div class="wrap site-grid">
+    <div class="site-photo rv-in">
+      <div class="frame">
+        <img loading="lazy" src="https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_1400,q_auto/v1622484839/campground-photos/vtyckn4rz8cnsoofivbm/the-bluffs-at-cedar-creek-bluffs-at-cedar-creek.jpg" alt="A waterfront campsite with hookups at The Bluffs">
+      </div>
+      <div class="price-tag"><b>$56</b><small>per night</small></div>
+    </div>
+
+    <div class="site-copy rv-in">
+      <span class="eyebrow"><i class="fa-solid fa-campground"></i> RV &amp; Tent Site</span>
+      <h2>A small campground with a whole farm around it</h2>
+      <p class="lead">Eight sites sit along Cedar Creek as it winds through the middle of an 863 acre farm. Six of them are right on the water, and each one is level, grassy and easy to pull into.</p>
+      <p>You're about 1.5 hours from Washington DC and 4 miles from the West Virginia line. Wildlife is everywhere, the nights are quiet, and you can park right at your site so unloading takes minutes.</p>
+
+      <div class="tabs" role="tablist" aria-label="Site details">
+        <button class="tab" role="tab" aria-selected="true" aria-controls="p1" id="t1">Included</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1">RV Details</button>
+        <button class="tab" role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1">Good to Know</button>
+      </div>
+
+      <div class="panel active" id="p1" role="tabpanel" aria-labelledby="t1">
+        <ul class="amen">
+          <li><i class="fa-solid fa-bolt"></i>Electric hookup, 50 amp</li>
+          <li><i class="fa-solid fa-faucet-drip"></i>Water hookup and spigot</li>
+          <li><i class="fa-solid fa-fire-flame-curved"></i>Private fire pit with grate</li>
+          <li><i class="fa-solid fa-chair"></i>Wide picnic table</li>
+          <li><i class="fa-solid fa-toilet-portable"></i>Clean portable toilets</li>
+          <li><i class="fa-solid fa-trash-can"></i>Trash bins on site</li>
+          <li><i class="fa-solid fa-tree"></i>Firewood for sale</li>
+          <li><i class="fa-solid fa-fish"></i>Free pond fishing</li>
+        </ul>
+      </div>
+      <div class="panel" id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+        <ul class="amen">
+          <li><i class="fa-solid fa-ruler-horizontal"></i>Rigs under 60 ft</li>
+          <li><i class="fa-solid fa-arrows-left-right"></i>Pull through sites</li>
+          <li><i class="fa-solid fa-up-right-and-down-left-from-center"></i>Slideouts fit</li>
+          <li><i class="fa-solid fa-plug-circle-bolt"></i>30 and 50 amp hookups</li>
+          <li><i class="fa-solid fa-gas-pump"></i>Generators allowed</li>
+          <li><i class="fa-solid fa-car"></i>Up to 2 vehicles</li>
+          <li><i class="fa-solid fa-truck-pickup"></i>Trailers, fifth wheels, Class A, B, C, vans, rooftop tents</li>
+          <li><i class="fa-solid fa-seedling"></i>Grass surface, may need a little leveling</li>
+        </ul>
+      </div>
+      <div class="panel" id="p3" role="tabpanel" aria-labelledby="t3" hidden>
+        <ul class="amen">
+          <li class="no"><i class="fa-solid fa-shower"></i>No showers, swim in the creek</li>
+          <li class="no"><i class="fa-solid fa-wifi"></i>No wifi, a real unplug</li>
+          <li class="no"><i class="fa-solid fa-sink"></i>No sewer hookup at the site</li>
+          <li class="no"><i class="fa-solid fa-kitchen-set"></i>Bring your own cookware</li>
+          <li><i class="fa-solid fa-user-group"></i>Up to 6 guests per site</li>
+          <li><i class="fa-solid fa-fish-fins"></i>Stream fishing needs a reservation</li>
+          <li><i class="fa-solid fa-children"></i>Great for families and kids</li>
+          <li><i class="fa-solid fa-wheelchair"></i>Wheelchair access</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLORE -->
+<section class="section" id="explore">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div>
+        <span class="eyebrow"><i class="fa-solid fa-compass"></i> On the Farm &amp; Nearby</span>
+        <h2>Plenty to do, or nothing at all</h2>
+      </div>
+      <p>Most guests say it's hard to leave the property. When you do, the Shenandoah Valley is right outside the gate.</p>
+    </div>
+    <div class="todo-grid">
+      <article class="todo rv-in"><span class="dist">On site</span><div class="ic"><i class="fa-solid fa-person-hiking"></i></div><h3>4 Mile Trail</h3><p>Walk or run from one end of the farm to the other and loop back without retracing a step.</p></article>
+      <article class="todo rv-in"><span class="dist">On site</span><div class="ic"><i class="fa-solid fa-fish"></i></div><h3>Trout Stream</h3><p>Cedar Creek is stocked with trout and has deep pools for a cool swim. Pond fishing is free.</p></article>
+      <article class="todo rv-in"><span class="dist">On site</span><div class="ic"><i class="fa-solid fa-sailboat"></i></div><h3>The Pond</h3><p>A small sandy beach with kayaks and a paddle boat. Kids love it on hot summer days.</p></article>
+      <article class="todo rv-in"><span class="dist">2 miles</span><div class="ic"><i class="fa-solid fa-mountain"></i></div><h3>Eagle Rock</h3><p>A short drive to one of the best hikes in the area, with a wide view back to the east.</p></article>
+      <article class="todo rv-in"><span class="dist">Under 1 hr</span><div class="ic"><i class="fa-solid fa-tree"></i></div><h3>Shenandoah NP</h3><p>Skyline Drive, waterfalls and big ridgeline hikes, all within an easy day trip.</p></article>
+      <article class="todo rv-in"><span class="dist">Nearby</span><div class="ic"><i class="fa-solid fa-wine-glass"></i></div><h3>Valley Tastings</h3><p>Farmers markets, wineries, breweries and even a distillery just down the valley.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div>
+        <span class="eyebrow" style="color:#F4B66F"><i class="fa-solid fa-comment-dots"></i> Guest Stories</span>
+        <h2>Why people come back</h2>
+      </div>
+      <div class="score"><b>100%</b><span>of guests recommend<br>122 ratings · 104 reviews</span></div>
+    </div>
+    <div style="overflow:hidden" class="rv-in">
+      <div class="rv-track" id="rvTrack">
+        <article class="rv"><div class="stars" aria-label="Recommended"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><q>Great setup right along the creek. Good electric and water hookups, and a pump out station on the property. This was our third Labor Day here. We caught crawfish in the creek and my girls and our dog played in the water all weekend.</q><footer><span class="av">EH</span><div><b>Edward H.</b><small>19 ft travel trailer · Sept 2026</small></div></footer></article>
+        <article class="rv"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><q>I could run three miles every morning without retracing my steps, then cool off in the trout stream. As a solo female traveler, Levi made me feel safe and welcome. Honestly, it was tough to leave the property.</q><footer><span class="av">KW</span><div><b>Kris W.</b><small>35 ft travel trailer · Aug 2026</small></div></footer></article>
+        <article class="rv"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><q>A small private campground with the amenities of a large one. Absolutely amazing place with a creek and views. I wish I could have stayed longer, and I will definitely return.</q><footer><span class="av">JP</span><div><b>Jay P.</b><small>35 ft travel trailer · Aug 2026</small></div></footer></article>
+        <article class="rv"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><q>Wonderful spot on a bubbling river and super dog friendly. If you don't like the river you can take a dip in the swimming pond. Great firewood on property and even a tiny stand for eggs.</q><footer><span class="av">JP</span><div><b>John P.</b><small>20 ft campervan · July 2026</small></div></footer></article>
+        <article class="rv"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><q>We used the pond and all its extras, kayaks, trampoline and paddle boat. The kids loved it. We visited Shenandoah and the caverns too, and it beat being stacked camper to camper in an RV park.</q><footer><span class="av">MC</span><div><b>Miller C.</b><small>36 ft travel trailer · July 2025</small></div></footer></article>
+        <article class="rv"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><q>What I loved most was the sound of the creek. So peaceful after a long day. You can park right at your site, which makes loading and unloading gear extremely easy.</q><footer><span class="av">HN</span><div><b>Hoang N.</b><small>Tent · Jan 2026</small></div></footer></article>
+      </div>
+    </div>
+    <div class="rv-ctrl">
+      <button id="rvPrev" aria-label="Previous reviews"><i class="fa-solid fa-arrow-left"></i></button>
+      <button id="rvNext" aria-label="Next reviews"><i class="fa-solid fa-arrow-right"></i></button>
+      <div class="rv-dots" id="rvDots" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOST -->
+<section class="section" id="host">
+  <div class="wrap">
+    <div class="host-card rv-in">
+      <img class="host-pic" loading="lazy" src="https://hipcamp-res.cloudinary.com/image/upload/c_fill,f_auto,h_300,w_300/v1615034152/profile/yewbznkbhhxkmapfvblj.jpg" alt="Levi, your host">
+      <div>
+        <span class="eyebrow"><i class="fa-solid fa-hand"></i> Meet Your Host</span>
+        <h2>Hi, I'm Levi</h2>
+        <p>I've been in this valley a long time and I'm happy to point you to the best hikes, swimming holes and wineries. I check in on every site each day, deliver firewood, and I'm always a quick message away if you need a hand.</p>
+      </div>
+      <div class="host-stats">
+        <div class="hs"><i class="fa-solid fa-award"></i><div><b>Star Host</b>Highly rated &amp; responsive</div></div>
+        <div class="hs"><i class="fa-solid fa-bolt"></i><div><b>Within an hour</b>Typical reply time</div></div>
+        <div class="hs"><i class="fa-solid fa-calendar-days"></i><div><b>Hosting since 2021</b>100% response rate</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section book" id="book">
+  <div class="wrap">
+    <div class="sec-head rv-in">
+      <div>
+        <span class="eyebrow"><i class="fa-solid fa-calendar-check"></i> Reserve Your Site</span>
+        <h2>Book your stay</h2>
+      </div>
+      <p>Send your dates and Levi will confirm your site, usually within the hour. No payment is taken today.</p>
+    </div>
+
+    <div class="book-grid">
+      <div class="form-card rv-in">
+        <form id="bookForm" novalidate>
+          <div class="steps" aria-hidden="true"><span id="s1"></span><span id="s2"></span><span id="s3"></span></div>
+          <div class="fgrid">
+            <div class="field">
+              <label for="fIn">Arrival date</label>
+              <input type="date" id="fIn" required>
+            </div>
+            <div class="field">
+              <label for="fOut">Departure date</label>
+              <input type="date" id="fOut" required>
+              <div class="hint" id="dateHint"><i class="fa-regular fa-clock"></i> Check in after 12 PM, out before 12 PM</div>
+            </div>
+
+            <div class="field">
+              <label id="gLabel">Guests</label>
+              <div class="stepper" role="group" aria-labelledby="gLabel">
+                <button type="button" id="gMinus" aria-label="Fewer guests"><i class="fa-solid fa-minus"></i></button>
+                <output id="gCount" aria-live="polite">2 guests</output>
+                <button type="button" id="gPlus" aria-label="More guests"><i class="fa-solid fa-plus"></i></button>
+              </div>
+              <div class="hint">Up to 6 guests per site</div>
+            </div>
+            <div class="field">
+              <label for="fStay">How are you camping?</label>
+              <select id="fStay">
+                <option value="tent">Tent</option>
+                <option value="trailer">Travel trailer</option>
+                <option value="fifth">Fifth wheel</option>
+                <option value="classA">Class A RV</option>
+                <option value="classBC">Class B or C RV</option>
+                <option value="van">Campervan or car</option>
+                <option value="popup">Pop up or truck camper</option>
+              </select>
+            </div>
+
+            <div class="field full" id="rigWrap" hidden>
+              <label for="fRig">Rig length in feet</label>
+              <input type="number" id="fRig" min="8" max="80" placeholder="e.g. 30" inputmode="numeric">
+              <div class="hint" id="rigHint"><i class="fa-solid fa-ruler"></i> Rigs under 60 ft fit our pull through sites</div>
+            </div>
+
+            <div class="field full">
+              <label>Add to your stay</label>
+              <div class="toggles">
+                <div class="tog"><input type="checkbox" id="tPets"><label for="tPets"><i class="fa-solid fa-paw"></i> Bringing dogs</label></div>
+                <div class="tog"><input type="checkbox" id="tFish"><label for="tFish"><i class="fa-solid fa-fish-fins"></i> Stream fishing</label></div>
+                <div class="tog"><input type="checkbox" id="tWood"><label for="tWood"><i class="fa-solid fa-fire"></i> Firewood on arrival</label></div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="fName">Full name</label>
+              <input type="text" id="fName" autocomplete="name" required placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="fPhone">Phone</label>
+              <input type="tel" id="fPhone" autocomplete="tel" placeholder="(555) 123 4567">
+            </div>
+            <div class="field full">
+              <label for="fEmail">Email</label>
+              <input type="email" id="fEmail" autocomplete="email" required placeholder="you@email.com">
+            </div>
+            <div class="field full">
+              <label for="fMsg">Anything Levi should know? <span style="font-weight:400;color:var(--muted)">(optional)</span></label>
+              <textarea id="fMsg" placeholder="Arrival time, a site by the water, celebrating something..."></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <span class="note"><i class="fa-solid fa-shield-halved"></i> Free to request · moderate cancellation</span>
+            <button class="btn btn-amber" type="submit"><i class="fa-solid fa-paper-plane"></i> Request to Book</button>
+          </div>
+        </form>
+
+        <div class="success" id="success" role="status">
+          <div class="ok"><i class="fa-solid fa-check"></i></div>
+          <h3>Request sent!</h3>
+          <p id="successText">Levi will be in touch shortly to confirm your site. Keep an eye on your inbox.</p>
+          <button class="btn btn-dark" style="margin-top:22px" id="again"><i class="fa-solid fa-rotate-left"></i> Make another request</button>
+        </div>
+      </div>
+
+      <aside class="summary rv-in" aria-label="Price summary">
+        <h3>Your Stay</h3>
+        <p class="rate">$56 per night · up to 6 guests</p>
+        <div class="sum-row"><span>Dates</span><span id="sDates">Choose dates</span></div>
+        <div class="sum-row"><span>Nights</span><span id="sNights">0</span></div>
+        <div class="sum-row"><span>Guests</span><span id="sGuests">2</span></div>
+        <div class="sum-row"><span>Camping</span><span id="sStay">Tent</span></div>
+        <div class="sum-total"><span>Estimated total</span><b id="sTotal">$0</b></div>
+        <ul class="rules">
+          <li><i class="fa-solid fa-clock"></i>Check in after 12 PM, check out before 12 PM</li>
+          <li><i class="fa-solid fa-moon"></i>1 night minimum, book up to 12 months out</li>
+          <li><i class="fa-solid fa-car"></i>Maximum 2 vehicles, park at your site</li>
+          <li><i class="fa-solid fa-leaf"></i>Leave it better than you found it</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="logo-mark"><i class="fa-solid fa-mountain-sun"></i></span><span><b>The Bluffs</b><small>at Cedar Creek</small></span></a>
+        <p>Waterfront camping on a working farm in the mountains of northern Virginia, close to Shenandoah and far from the city noise.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#gallery">Photos</a></li>
+          <li><a href="#site">The Site</a></li>
+          <li><a href="#explore">Things to Do</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Plan</h4>
+        <ul>
+          <li><a href="#book">Book Your Stay</a></li>
+          <li><a href="#host">Meet Levi</a></li>
+          <li><a href="#site">RV Details</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i> Star Tannery, Frederick County, VA</li>
+          <li><i class="fa-solid fa-car-side"></i> 1.5 hours from Washington DC</li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="#book">Send a booking request</a></li>
+          <li><i class="fa-solid fa-bolt"></i> Replies within an hour</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© <span id="yr"></span> The Bluffs at Cedar Creek. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- MOBILE BAR -->
+<div class="mbar" id="mbar">
+  <div><b>$56</b> <small>/ night</small></div>
+  <a href="#book" class="btn btn-amber"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <span class="count" id="lbCount"></span>
+  <button class="close" id="lbClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="prev" id="lbPrev" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+  <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="next" id="lbNext" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
+</div>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const RATE = 56;
+  const CDN = 'https://dxynby2r8cy0b.cloudfront.net/images/f_auto,c_limit,w_2000,q_auto/';
+  const TAIL = '/the-bluffs-at-cedar-creek-bluffs-at-cedar-creek.jpg';
+  const photos = [
+    ['v1615035898/campground-photos/udgv6qze4cuwqmlqipy1','The bluffs above Cedar Creek'],
+    ['v1615036057/campground-photos/nzuheewoa2qg7l50qumj','Sunset over the farm'],
+    ['v1615036615/campground-photos/ntuoohfltm5wvm0lfary','Across the creek at site one'],
+    ['v1615036592/campground-photos/hyv3yfottp1quhfvezis','Open land by the water'],
+    ['v1615036646/campground-photos/yl7mgzkgdbrs6ixgpxiq','Cedar Creek through the valley'],
+    ['v1622484839/campground-photos/vtyckn4rz8cnsoofivbm','A waterfront site with hookups'],
+    ['v1615035435/campground-photos/afuhomqst5qy5afoje5u','The bluffs paint a new picture every day']
+  ];
+
+  $('#yr').textContent = new Date().getFullYear();
+
+  /* nav */
+  const nav = $('#nav'), mbar = $('#mbar');
+  const onScroll = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('solid', y > 60);
+    const book = $('#book').getBoundingClientRect();
+    mbar.classList.toggle('show', y > window.innerHeight * .7 && book.top > window.innerHeight * .6);
+  };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  const burger = $('#burger'), links = $('#navLinks');
+  burger.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+    burger.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    if (open) nav.classList.add('solid');
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { links.classList.remove('open'); burger.setAttribute('aria-expanded', false); burger.innerHTML = '<i class="fa-solid fa-bars"></i>'; }));
+
+  /* reveal */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); } }), {threshold:.12});
+  document.querySelectorAll('.rv-in').forEach((el,i) => { el.style.transitionDelay = (el.classList.contains('todo') ? (i % 3) * 90 : 0) + 'ms'; io.observe(el); });
+
+  /* dates */
+  const iso = d => d.toISOString().slice(0,10);
+  const today = new Date(); today.setHours(12);
+  const maxD = new Date(today); maxD.setFullYear(maxD.getFullYear() + 1);
+  ['#qbIn','#qbOut','#fIn','#fOut'].forEach(s => { $(s).min = iso(today); $(s).max = iso(maxD); });
+  const linkDates = (a, b) => $(a).addEventListener('change', () => {
+    if (!$(a).value) return;
+    const next = new Date($(a).value + 'T12:00'); next.setDate(next.getDate() + 1);
+    $(b).min = iso(next);
+    if (!$(b).value || $(b).value <= $(a).value) $(b).value = iso(next);
+    $(b).dispatchEvent(new Event('change'));
+  });
+  linkDates('#qbIn','#qbOut'); linkDates('#fIn','#fOut');
+
+  /* quickbar to form */
+  $('#quickbar').addEventListener('submit', e => {
+    e.preventDefault();
+    if ($('#qbIn').value) $('#fIn').value = $('#qbIn').value;
+    if ($('#qbOut').value) $('#fOut').value = $('#qbOut').value;
+    guests = +$('#qbGuests').value; renderGuests();
+    update();
+    $('#book').scrollIntoView({behavior:'smooth'});
+    setTimeout(() => $(($('#fIn').value ? '#fName' : '#fIn')).focus({preventScroll:true}), 700);
+  });
+
+  /* tabs */
+  const tabs = [...document.querySelectorAll('.tab')];
+  const select = t => {
+    tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1;
+      const p = document.getElementById(x.getAttribute('aria-controls')); p.hidden = !on; p.classList.toggle('active', on); });
+    t.focus();
+  };
+  tabs.forEach((t,i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') select(tabs[(i+1) % tabs.length]);
+      if (e.key === 'ArrowLeft') select(tabs[(i-1+tabs.length) % tabs.length]);
+    });
+  });
+
+  /* lightbox */
+  const lb = $('#lb'), lbImg = $('#lbImg');
+  let cur = 0, lastFocus = null;
+  const show = i => {
+    cur = (i + photos.length) % photos.length;
+    lbImg.style.opacity = 0;
+    const img = new Image();
+    img.onload = img.onerror = () => { lbImg.src = img.src; lbImg.alt = photos[cur][1]; lbImg.style.opacity = 1; };
+    img.src = CDN + photos[cur][0] + TAIL;
+    $('#lbCap').textContent = photos[cur][1];
+    $('#lbCount').textContent = (cur+1) + ' / ' + photos.length;
+  };
+  const open = i => { lastFocus = document.activeElement; show(i); lb.classList.add('open'); document.body.style.overflow = 'hidden'; $('#lbClose').focus(); };
+  const close = () => { lb.classList.remove('open'); document.body.style.overflow = ''; lastFocus && lastFocus.focus(); };
+  document.querySelectorAll('.tile').forEach(t => {
+    t.addEventListener('click', () => open(+t.dataset.i));
+    t.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(+t.dataset.i); } });
+  });
+  $('#openAll').addEventListener('click', () => open(0));
+  $('#lbClose').addEventListener('click', close);
+  $('#lbPrev').addEventListener('click', () => show(cur-1));
+  $('#lbNext').addEventListener('click', () => show(cur+1));
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') show(cur+1);
+    if (e.key === 'ArrowLeft') show(cur-1);
+  });
+  let sx = 0;
+  lb.addEventListener('touchstart', e => sx = e.touches[0].clientX, {passive:true});
+  lb.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1)); });
+
+  /* reviews slider */
+  const track = $('#rvTrack'), cards = [...track.children], dots = $('#rvDots');
+  let page = 0;
+  const perView = () => innerWidth <= 620 ? 1 : innerWidth <= 1020 ? 2 : 3;
+  const pages = () => Math.ceil(cards.length / perView());
+  const renderRv = () => {
+    page = Math.min(page, pages()-1);
+    const w = cards[0].getBoundingClientRect().width + 20;
+    track.style.transform = `translateX(${-page * perView() * w}px)`;
+    dots.innerHTML = Array.from({length:pages()}, (_,i) => `<span class="${i===page?'on':''}"></span>`).join('');
+    $('#rvPrev').disabled = page === 0;
+    $('#rvNext').disabled = page === pages()-1;
+  };
+  $('#rvPrev').addEventListener('click', () => { page--; renderRv(); });
+  $('#rvNext').addEventListener('click', () => { page++; renderRv(); });
+  addEventListener('resize', renderRv); renderRv();
+
+  /* booking */
+  let guests = 2;
+  const renderGuests = () => {
+    $('#gCount').textContent = guests + (guests === 1 ? ' guest' : ' guests');
+    $('#gMinus').disabled = guests <= 1; $('#gPlus').disabled = guests >= 6;
+    update();
+  };
+  $('#gMinus').addEventListener('click', () => { if (guests > 1) { guests--; renderGuests(); } });
+  $('#gPlus').addEventListener('click', () => { if (guests < 6) { guests++; renderGuests(); } });
+
+  const stay = $('#fStay'), rigWrap = $('#rigWrap'), rig = $('#fRig'), rigHint = $('#rigHint');
+  const rigTypes = ['trailer','fifth','classA','classBC'];
+  stay.addEventListener('change', () => { rigWrap.hidden = !rigTypes.includes(stay.value); checkRig(); update(); });
+  const checkRig = () => {
+    const v = +rig.value;
+    const bad = !rigWrap.hidden && v >= 60;
+    rig.classList.toggle('err', bad);
+    rigHint.className = 'hint' + (bad ? ' warn' : '');
+    rigHint.innerHTML = bad
+      ? '<i class="fa-solid fa-triangle-exclamation"></i> Sorry, rigs need to be under 60 ft. Message Levi before booking.'
+      : '<i class="fa-solid fa-ruler"></i> Rigs under 60 ft fit our pull through sites';
+    return !bad;
+  };
+  rig.addEventListener('input', checkRig);
+
+  const fmt = d => new Date(d + 'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  const nights = () => {
+    const a = $('#fIn').value, b = $('#fOut').value;
+    if (!a || !b) return 0;
+    return Math.max(0, Math.round((new Date(b) - new Date(a)) / 864e5));
+  };
+  function update(){
+    const n = nights();
+    $('#sDates').textContent = n ? `${fmt($('#fIn').value)} to ${fmt($('#fOut').value)}` : 'Choose dates';
+    $('#sNights').textContent = n;
+    $('#sGuests').textContent = guests;
+    $('#sStay').textContent = stay.options[stay.selectedIndex].text;
+    $('#sTotal').textContent = '$' + (n * RATE).toLocaleString();
+    const filled = [n > 0, $('#fName').value.trim() && /\S+@\S+\.\S+/.test($('#fEmail').value), true];
+    $('#s1').classList.toggle('on', filled[0]);
+    $('#s2').classList.toggle('on', filled[0] && !!filled[1]);
+  }
+  ['#fIn','#fOut','#fName','#fEmail'].forEach(s => { $(s).addEventListener('input', update); $(s).addEventListener('change', update); });
+  renderGuests();
+
+  const form = $('#bookForm');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    let ok = true, first = null;
+    const need = [['#fIn', !!$('#fIn').value], ['#fOut', nights() > 0], ['#fName', !!$('#fName').value.trim()], ['#fEmail', /\S+@\S+\.\S+/.test($('#fEmail').value)]];
+    need.forEach(([s, good]) => { $(s).classList.toggle('err', !good); if (!good) { ok = false; first = first || $(s); } });
+    if (!checkRig()) { ok = false; first = first || rig; }
+    $('#dateHint').className = 'hint' + (nights() > 0 || !$('#fIn').value ? '' : ' warn');
+    if (!ok) { first.focus(); return; }
+    $('#s3').classList.add('on');
+    const n = nights();
+    $('#successText').textContent = `Thanks ${$('#fName').value.trim().split(' ')[0]}! Your request for ${n} night${n>1?'s':''} (${fmt($('#fIn').value)} to ${fmt($('#fOut').value)}) is on its way. Levi will email ${$('#fEmail').value} to confirm your site.`;
+    setTimeout(() => { form.style.display = 'none'; $('#success').classList.add('show'); }, 250);
+  });
+  form.querySelectorAll('input').forEach(i => i.addEventListener('input', () => i.classList.remove('err')));
+  $('#again').addEventListener('click', () => { form.reset(); guests = 2; renderGuests(); rigWrap.hidden = true; ['#s1','#s2','#s3'].forEach(s => $(s).classList.remove('on')); $('#success').classList.remove('show'); form.style.display = ''; });
+})();
+</script>
+</body>
+</html>
